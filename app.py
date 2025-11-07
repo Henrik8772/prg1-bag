@@ -7,14 +7,16 @@ while bag:
     print("Show items [I]")
     print("Save in the bag [S]")
     print("End program [E]")
+    print("Search items [F]")
     print("Remove from bag [R] \n")
     choice = input("Choose: ")
 
     if choice.lower() == "i":
         if inventory:
             print("This is your inventory!😃")
-            for thing in inventory:
-                print(thing)
+            for thing in set(inventory):
+                print(f"{inventory.count(thing)}x {thing}")
+
         else:
             print("Your bag is empty!😭")
 
@@ -32,6 +34,18 @@ while bag:
 
     elif choice.lower() == "e":
         bag = False
+
+    elif choice.lower() == "f":
+        queries = input(
+            "What do you want to search for? (seperate with commas): ")
+        search_items = [q.strip().lower() for q in queries.split(",")]
+
+        for item in search_items:
+            count = inventory.count(item)
+            if count > 0:
+                print(f"Found: {count}x {item} in your inventory")
+            else:
+                print(f"{item} not found in your inventory")
 
     else:
         print("Error unknown command, try again.")
