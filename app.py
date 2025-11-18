@@ -16,6 +16,7 @@ def add_item_from_text(raw_text):
         name = raw_text.strip().lower()
         if name:
             inventory.append(name)
+    inventory.sort()
 
 
 while bag:
@@ -63,11 +64,13 @@ while bag:
                         removed += 1
                     except ValueError:
                         break
+                inventory.sort()
                 print(f"Removed {removed}x {name}")
             else:
                 name = to_remove.strip().lower()
                 try:
                     inventory.remove(name)
+                    inventory.sort()
                     print(f"Removed 1x {name}")
                 except ValueError:
                     print(f"{name} not in inventory")
