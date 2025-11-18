@@ -11,3 +11,7 @@ jag har gjort  så du kan remova saker från inventoryt samt också gjort så at
 jag använder en while loop för påsens kommandon och de grejerna samt så använder jag en def innan while loopen för systemet med att kunna skriva 6 stone och få 6x stone i inventoryt. 
 
 det finns några veriablar utanför loopen också.
+
+detta är länken till regex guide på vad den gör och hur man använder den ungefär, jag sökte up på google om sätt att gör det där med att kunna savea mer av en sak samtidigt utan att skriva namnet om och om igen då var detta den mest använda import och kommandona jag hittade.
+
+https://www.w3schools.com/python/python_regex.asp
